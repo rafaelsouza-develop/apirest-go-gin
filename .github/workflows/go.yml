@@ -64,4 +64,4 @@ jobs:
         run: sudo docker pull rsouzaribeiro/api_alunos_estudos:latest
 
       - name: Run docker container
-        run: sudo docker run -d -p 8080:8080 --name deploy_apirest rsouzaribeiro/api_alunos_estudos
+        run: sudo docker run -d -p 8080:8080  rsouzaribeiro/api_alunos_estudos
