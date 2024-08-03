@@ -1,4 +1,5 @@
 FROM golang:1.22-alpine
 WORKDIR /app
-COPY apirest-go-gin.exe apirest-go-gin.exe
+COPY apirest-go-gin apirest-go-gin
 EXPOSE 8080
+CMD ["./apirest-go-gin"]
