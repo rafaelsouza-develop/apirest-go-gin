@@ -51,8 +51,8 @@ jobs:
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
       - name: Build docker image
-        run: docker build -t rsouzaribeiro/pos_tech_fiap8soat .
+        run: docker build -t rsouzaribeiro/api_alunos_estudos .
 
       - name: Push Image Docker
-        run: docker push rsouzaribeiro/pos_tech_fiap8soat
+        run: docker push rsouzaribeiro/api_alunos_estudos
 
