@@ -61,7 +61,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker pull rsouzaribeiro/api_alunos_estudos:latest
+        run: sudo docker pull rsouzaribeiro/api_alunos_estudos:latest
 
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name deploy_apirest rsouzaribeiro/api_alunos_estudos
+        run: sudo docker run -d -p 8080:8080 --name deploy_apirest rsouzaribeiro/api_alunos_estudos
