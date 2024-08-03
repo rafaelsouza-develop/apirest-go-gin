@@ -56,3 +56,12 @@ jobs:
       - name: Push Image Docker
         run: docker push rsouzaribeiro/api_alunos_estudos
 
+  deploy:
+    needs: build-test-and-deploy
+    runs-on: self-hosted
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull rsouzaribeiro/api_alunos_estudos:latest
+
+      - name: Run docker container
+        run: docker run -d -p 8080:8080 --name deploy_apirest rsouzaribeiro/api_alunos_estudos
